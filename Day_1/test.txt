@@ -1,0 +1,28 @@
+Data Types
+    Primitive = {
+        undefined;
+        Boolean;
+        Number;
+        Float;
+        Infinity;
+        String;
+    }
+    
+    console.log (typeof variableName);
+
+    Structural = {
+        Object;
+        Array;
+        Set;
+        null;
+    }
+
+
+Operators
+    Math.ceil(x);
+    Math.floor(x);
+    Math.round(x);
+    Math.random();
+
+    const arr = [1, 2, 3];
+    Math.max(...arr);
