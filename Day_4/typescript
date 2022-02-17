@@ -1,0 +1,14 @@
+Script started on Thu Feb 17 09:50:21 2022
+[1m[7m%[27m[1m[0m                                                                                                                                                   [0m[27m[24m[J(base) blueberry@MacBookPro Day_4 % [K[?2004hnnode script.js[?2004l
+[33mfalse[39m
+[1m[7m%[27m[1m[0m                                                                                                                                                   [0m[27m[24m[J(base) blueberry@MacBookPro Day_4 % [K[?2004hnode script.js[?2004l
+[33mfalse[39m
+[ [33m32[39m, [33m33[39m, [33m40[39m ]
+[1m[7m%[27m[1m[0m                                                                                                                                                   [0m[27m[24m[J(base) blueberry@MacBookPro Day_4 % [K[?2004hsscript stop[?2004l
+Script started, output file is stop
+[1m[7m%[27m[1m[0m                                                                                                                                                   [0m[27m[24m[J(base) blueberry@MacBookPro Day_4 % [K[?2004hsscript --help[?2004l
+script: illegal option -- -
+usage: script [-adkpqr] [-t time] [file [command ...]]
+[1m[7m%[27m[1m[0m                                                                                                                                                   [0m[27m[24m[J(base) blueberry@MacBookPro Day_4 % [K[?2004hsscript ?[?2004l
+zsh: no matches found: ?
+[1m[7m%[27m[1m[0m                                                                                                                                                   [0m[27m[24m[J(base) blueberry@MacBookPro Day_4 % [K[?2004h
