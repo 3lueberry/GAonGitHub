@@ -201,3 +201,6 @@ const wakanda = {
 
 console.log(wakanda);
 wakanda.wakandaForever();
+
+const [key, value] = Object.entries(wakanda);
+console.log(key, value);
