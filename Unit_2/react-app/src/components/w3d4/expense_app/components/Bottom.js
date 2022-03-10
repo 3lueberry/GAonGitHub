@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./Button";
+// import Button from "./Button";
 import Expenses from "./Expenses";
 
 const Bottom = (props) => {
@@ -9,8 +9,12 @@ const Bottom = (props) => {
       <ul className="container">
         {props.expenseList.map((exp, i) => (
           <li className="row" key={i}>
-            <Expenses {...exp} clicked={(item) => props.edit(i, item)} />
-            <Button label="Delete" clicked={() => props.delete(i)} />
+            <Expenses
+              {...exp}
+              clicked={(item) => props.edit(i, item)}
+              delete={() => props.delete(i)}
+            />
+            {/* <Button label="Delete" clicked={() => props.delete(i)} /> */}
           </li>
         ))}
       </ul>

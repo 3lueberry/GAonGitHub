@@ -1,7 +1,7 @@
 import React from "react";
 import Top from "./Top";
-import FormInput from "./FormInput";
-import Label from "./Label";
+// import FormInput from "./FormInput";
+// import Label from "./Label";
 
 const Expenses = (props) => {
   return (
@@ -23,6 +23,8 @@ const Expenses = (props) => {
         price={props.price}
         date={props.date}
         submit={(item) => props.clicked(item)}
+        editMode={true}
+        deleteBtn={props.delete}
       />
     </>
   );

@@ -15,6 +15,7 @@ const App = () => {
           price="S$"
           date={today}
           submit={(item) => setExpenseList((prevState) => [...prevState, item])}
+          editMode={false}
         />
       </div>
       <div className="row">

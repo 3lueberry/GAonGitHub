@@ -38,6 +38,8 @@ const Top = (props) => {
   const [date, setDate] = useState(props.date);
   const dateRef = useRef();
 
+  const [edit, setEdit] = useState(props.editMode);
+
   const handleChanges = (e) => {
     // const target = formList.find((d) => d.name === e.target.name);
     // if (
@@ -88,9 +90,11 @@ const Top = (props) => {
     else if (date === "" || isNaN(tempDate)) dateRef.current.focus();
     else {
       props.submit({ desc, price, date });
-      setDesc(props.desc);
-      setPrice(props.price);
-      setDate(props.date);
+      if (!props.editMode) {
+        setDesc(props.desc);
+        setPrice(props.price);
+        setDate(props.date);
+      } //else setEdit(true);
     }
   };
 
@@ -120,6 +124,7 @@ const Top = (props) => {
               inputRef={descRef}
               value={desc}
               handleChange={handleChanges}
+              disabled={edit}
             />
           </div>
         </div>
@@ -134,6 +139,7 @@ const Top = (props) => {
               inputRef={priceRef}
               value={price}
               handleChange={handleChanges}
+              disabled={edit}
             />
           </div>
         </div>
@@ -148,10 +154,34 @@ const Top = (props) => {
               inputRef={dateRef}
               value={date}
               handleChange={handleChanges}
+              disabled={edit}
             />
           </div>
         </div>
-        <button type="submit">Submit</button>
+
+        <div className="row">
+          <div className="col-sm-1">
+            <button style={{ width: `100%` }} disabled={edit} onClick={handleSubmit}>
+              {`${props.editMode ? "Save" : "Submit"}`}
+            </button>
+          </div>
+          <div className="col-sm-1">
+            <button
+              style={{ display: `${props.editMode ? "block" : "none"}`, width: `100%` }}
+              onClick={() => setEdit((prevState) => !prevState)}
+            >
+              Edit
+            </button>
+          </div>
+          <div className="col-sm-1">
+            <button
+              style={{ display: `${props.editMode ? "block" : "none"}`, width: `100%` }}
+              onClick={props.deleteBtn}
+            >
+              Delete
+            </button>
+          </div>
+        </div>
       </form>
     </>
   );

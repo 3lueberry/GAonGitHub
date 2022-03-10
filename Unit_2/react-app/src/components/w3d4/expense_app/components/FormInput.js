@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React /*, { useState }*/ from "react";
 
 const FormInput = (props) => {
   //   const [value, setValue] = useState(props.value);
@@ -19,6 +19,7 @@ const FormInput = (props) => {
       //   onFocus={focus}
       onChange={props.handleChange}
       style={{ width: "100%" }}
+      disabled={props.disabled}
     />
   );
 };
