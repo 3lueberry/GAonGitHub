@@ -1,0 +1,23 @@
+show dbs //display database
+
+use <dbName> //create/switch database
+
+db //show current db
+
+db.createCollection(<collectionName>) //create collection
+
+show collections // display collections
+
+db.dropDatabase() //destroy db
+
+db.<collectionName>.drop() //destroy collection
+
+db.<collectionName>.insertOne(<Object>) //add one row
+db.<collectionName>.insertMany(<Arrary>) //add multiple rows
+
+db.lesson.find()
+db.lesson.find().pretty()
+
+db.lesson.find().sort({name:1}) //sort accending
+db.lesson.find({key:value})
+db.lesson.findOne()

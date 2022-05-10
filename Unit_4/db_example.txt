@@ -1,0 +1,38 @@
+po_number
+po_placed_date
+
+buyer_name
+buyer_address
+buyer_contact
+
+part_number
+part_description
+part_price
+part_amount
+part_type
+
+
+pos
+    number - bigserial
+    placed_date - timestamp
+[FK]buyer_uuid - uuid
+
+buyers
+    name - varchar(80)
+    address - varchar(10)
+    contact - char(8)
+    uuid - uuid
+
+parts
+    number - serial
+    description - text
+    price - numeric(5,2)
+    part_type - char(12)
+
+po_parts
+[FK]po_number - int8
+[FK]part_number - int4
+    part_amount - int2
+
+part_types
+[PK]type

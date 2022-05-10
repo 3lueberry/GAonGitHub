@@ -1,0 +1,56 @@
+\l  : list DB
+\c  : change DB
+\dt : show Tables
+
+CREATE DATABASE <db_name>;
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+CREATE TABLE <table_name>;
+
+CREATE TABLE the_contacts (
+id serial NOT NULL,
+uuid uuid DEFAULT uuid_generate_v4(),
+name VARCHAR(20),
+address VARCHAR(50),
+number CHAR(8),
+PRIMARY KEY ("id"));    // " " double quote for column_name
+
+INSERT INTO the_contacts(name,address) VALUES('abc', '123');    // ' ' single quote for values
+SELECT uuid,address FROM the_contacts WHERE name='abc';
+
+CREATE USER postgres WITH ENCRYPED PASSWORD 'meelay';
+GRANT ALL PRIVILEGES ON DATABASE first_db to postgres;
+GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public to postgres;
+
+UPDATE <table_name>
+SET col_1='blah blah', col_2='blah blah'
+WHERE some_condition;
+
+WHERE something='something'
+WHERE (some_column LIKE '%something%' AND some_column='some_value') OR (some_column='some_value')
+
+DELETE FROM <table_name>
+WHERE some_condition;
+
+SELECT * FROM tableA, tableB, tableC
+WHERE tableA.id = tableB.tableA_id
+AND tableB.uuid = tableC.tableB_uuid; // A.PK = B.FK
+
+SELECT * FROM tableA
+INNER JOIN tableB ON tableA.id = tableB.tableA_id
+JOIN tableC ON tableB.uuid = tableC.tableB_uuid;    // JOIN same as INNER JOIN
+LEFT OUTER JOIN
+RIGHT OUTER JOIN
+FULL OUTER JOIN
+
+SELECT * FROM <table_name>
+WHERE col IN [ ]
+
+SELECT * FROM tableA
+WHERE col IN (
+    SELECT col FROM tableB
+    WHERE col = ""
+)
+
+SQL:
+    1. ORM
+    2. RAW SQL

@@ -1,0 +1,13 @@
+pip install django
+pipenv install django
+django-admin startproject one_project
+python manage.py startapp main_app
+python manage.py runserver
+
+pipenv install psycopg
+pipenv install psycopg-binary
+python manage.py startapp account
+
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser

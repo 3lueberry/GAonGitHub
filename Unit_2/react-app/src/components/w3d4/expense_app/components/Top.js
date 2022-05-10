@@ -1,6 +1,8 @@
 import React, { useState, useRef } from "react";
 import FormInput from "./FormInput";
 import Label from "./Label";
+import DatePicker from "react-date-picker";
+// import Button from "react-bootstrap/Button";
 
 const Top = (props) => {
   //   const initForm = [
@@ -183,6 +185,7 @@ const Top = (props) => {
           </div>
         </div>
       </form>
+      <DatePicker />
     </>
   );
 };

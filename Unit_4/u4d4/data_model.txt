@@ -1,0 +1,17 @@
+course_id
+course_ title
+course_fee
+class_start_date
+class_end_date
+class_id
+instructor_name
+instructor_address
+[instructor_contact]
+student_name
+student_address
+student_email
+[student_contact]
+student_registration_date
+student_payment_date
+student_payment_amount
+student_payment_balance

@@ -8,7 +8,6 @@ export default function App() {
   for (let c of data) {
     for (let i = 0; i < data.length; i++) {
       let newCard = { ...c };
-      newCard.key = newCard.id = data.indexOf(c).toString() + i.toString();
       cardArr.push(newCard);
     }
   }
@@ -17,7 +16,9 @@ export default function App() {
     for (let i = 0; i < cardArr.length; i++) {
       let randInd = Math.floor(Math.random() * cardArr.length);
       if (i !== randInd) [cardArr[i], cardArr[randInd]] = [cardArr[randInd], cardArr[i]];
+      cardArr[i].id = i;
     }
+    console.log(cardArr);
     return [...cardArr];
   };
 
